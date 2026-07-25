@@ -162,4 +162,37 @@ public class GildedRoseTest
         var item = UpdateOne(BackstagePass, 5, 49);
         Assert.Equal(50, item.Quality);
     }
+
+    // ---------- Conjured items ----------
+
+    [Fact]
+    public void ConjuredItem_BeforeSellBy_QualityDropsByTwo()
+    {
+        var item = UpdateOne("Conjured Mana Cake", 3, 6);
+        Assert.Equal(2, item.SellIn);
+        Assert.Equal(4, item.Quality);
+    }
+
+    [Fact]
+    public void ConjuredItem_OnSellByDate_QualityDropsByFour()
+    {
+        var item = UpdateOne("Conjured Mana Cake", 0, 6);
+        Assert.Equal(-1, item.SellIn);
+        Assert.Equal(2, item.Quality);
+    }
+
+    [Fact]
+    public void ConjuredItem_AfterSellBy_QualityDropsByFour()
+    {
+        var item = UpdateOne("Conjured Mana Cake", -1, 6);
+        Assert.Equal(-2, item.SellIn);
+        Assert.Equal(2, item.Quality);
+    }
+
+    [Fact]
+    public void ConjuredItem_QualityNeverNegative()
+    {
+        var item = UpdateOne("Conjured Mana Cake", 0, 3);
+        Assert.Equal(0, item.Quality);
+    }
 }
