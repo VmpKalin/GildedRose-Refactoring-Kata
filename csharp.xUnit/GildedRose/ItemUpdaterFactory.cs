@@ -31,6 +31,7 @@ public class ItemUpdaterFactory : IItemUpdaterFactory
         new AgedBrieUpdater(),
         new SulfurasUpdater(),
         new BackstagePassUpdater(),
+        new ConjuredItemUpdater(),
     });
 
     public IItemUpdater Get(Item item)
