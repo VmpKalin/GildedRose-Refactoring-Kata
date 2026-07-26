@@ -1,5 +1,4 @@
-using System.Collections.Generic;
-
+﻿using System.Collections.Generic;
 using GildedRoseKata.Factories;
 using GildedRoseKata.Interfaces;
 
@@ -23,6 +22,6 @@ public class GildedRose
     public void UpdateQuality()
     {
         foreach (var item in _items)
-            _factory.Get(item).Update(item);
+            _factory.Get(item).AdvanceOneDay(item);
     }
 }

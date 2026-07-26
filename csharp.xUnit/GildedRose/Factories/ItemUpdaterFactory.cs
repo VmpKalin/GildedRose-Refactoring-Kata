@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-
 using GildedRoseKata.Interfaces;
 using GildedRoseKata.Strategies;
 
@@ -28,14 +27,13 @@ public class ItemUpdaterFactory : IItemUpdaterFactory
         }
     }
 
-    public static ItemUpdaterFactory Default() => new(new IItemUpdater[]
-    {
-        new NormalItemUpdater(),
+    public static ItemUpdaterFactory Default() => new([
+        new DefaultItemUpdater(),
         new AgedBrieUpdater(),
         new SulfurasUpdater(),
         new BackstagePassUpdater(),
-        new ConjuredItemUpdater(),
-    });
+        new ConjuredItemUpdater()
+    ]);
 
     public IItemUpdater Get(Item item)
     {

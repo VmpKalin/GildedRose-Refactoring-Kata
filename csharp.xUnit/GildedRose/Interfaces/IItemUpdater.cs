@@ -6,5 +6,5 @@ public interface IItemUpdater
     string Name { get; }
 
     /// <summary>Applies one full day: quality change + SellIn change + clamping.</summary>
-    void Update(Item item);
+    void AdvanceOneDay(Item item);
 }

@@ -1,5 +1,4 @@
 using System;
-
 using GildedRoseKata.Interfaces;
 
 namespace GildedRoseKata.Strategies;
@@ -11,7 +10,7 @@ public abstract class ItemUpdaterBase : IItemUpdater
 
     public abstract string Name { get; }
 
-    public abstract void Update(Item item);
+    public abstract void AdvanceOneDay(Item item);
 
     protected static int ClampQuality(int quality) => Math.Clamp(quality, MinQuality, MaxQuality);
 }
