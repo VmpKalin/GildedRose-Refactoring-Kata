@@ -1,6 +1,8 @@
 using System;
 
-namespace GildedRoseKata;
+using GildedRoseKata.Interfaces;
+
+namespace GildedRoseKata.Strategies;
 
 public abstract class ItemUpdaterBase : IItemUpdater
 {

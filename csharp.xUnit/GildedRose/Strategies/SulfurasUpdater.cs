@@ -1,4 +1,4 @@
-namespace GildedRoseKata;
+namespace GildedRoseKata.Strategies;
 
 public class SulfurasUpdater : ItemUpdaterBase
 {

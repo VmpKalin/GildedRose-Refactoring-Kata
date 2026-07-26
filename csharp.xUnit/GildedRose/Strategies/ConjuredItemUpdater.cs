@@ -1,4 +1,6 @@
-namespace GildedRoseKata;
+using GildedRoseKata.Factories;
+
+namespace GildedRoseKata.Strategies;
 
 public class ConjuredItemUpdater : ItemUpdaterBase
 {

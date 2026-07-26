@@ -1,5 +1,8 @@
 using System.Collections.Generic;
 
+using GildedRoseKata.Factories;
+using GildedRoseKata.Interfaces;
+
 namespace GildedRoseKata;
 
 public class GildedRose

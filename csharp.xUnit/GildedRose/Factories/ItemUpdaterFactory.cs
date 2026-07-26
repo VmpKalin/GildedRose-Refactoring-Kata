@@ -1,7 +1,10 @@
 using System;
 using System.Collections.Generic;
 
-namespace GildedRoseKata;
+using GildedRoseKata.Interfaces;
+using GildedRoseKata.Strategies;
+
+namespace GildedRoseKata.Factories;
 
 public class ItemUpdaterFactory : IItemUpdaterFactory
 {
