@@ -52,7 +52,7 @@ GildedRose/
 │   └── ItemUpdaterFactory.cs  # resolves item -> strategy (exact name, then prefix, then fallback)
 └── Strategies/
     ├── ItemUpdaterBase.cs     # shared [0, 50] quality clamp
-    ├── NormalItemUpdater.cs   # -1 per day, -2 after sell-by (fallback strategy)
+    ├── DefaultItemUpdater.cs   # -1 per day, -2 after sell-by (fallback strategy)
     ├── AgedBrieUpdater.cs     # +1 per day, +2 after sell-by
     ├── SulfurasUpdater.cs     # legendary: no-op (Quality 80, SellIn frozen)
     ├── BackstagePassUpdater.cs# +1 / +2 (<=10) / +3 (<=5), 0 after the concert
